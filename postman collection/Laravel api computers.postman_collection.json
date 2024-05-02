@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "3310565e-916a-40d8-99c7-38717a497bde",
+		"name": "Laravel api computers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24152302"
+	},
+	"item": [
+		{
+			"name": "Index",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|mPFrgQ7xhMvV2MD07g8q3sHFZe22tcOUSqLXfqPEf9551ef8",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/computers"
+			},
+			"response": []
+		},
+		{
+			"name": "store",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|mPFrgQ7xhMvV2MD07g8q3sHFZe22tcOUSqLXfqPEf9551ef8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Prueba\",\r\n    \"ram\": 897060027.728,\r\n    \"hard_disk\": 105,\r\n    \"number_cores\": 2,\r\n    \"processor\": \"IOS\",\r\n    \"operative_system\": \"MAC\",\r\n    \"date_creation\": \"2018-11-18\",\r\n    \"graphic_memory?\": 0,\r\n    \"cc_graphic_memory\": 35929.596\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/computers"
+			},
+			"response": []
+		},
+		{
+			"name": "show",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|mPFrgQ7xhMvV2MD07g8q3sHFZe22tcOUSqLXfqPEf9551ef8",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/computers/11"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|mPFrgQ7xhMvV2MD07g8q3sHFZe22tcOUSqLXfqPEf9551ef8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"brand\": \"Modificado\",\r\n    \"ram\": 897060027.728,\r\n    \"hard_disk\": 105,\r\n    \"number_cores\": 2,\r\n    \"processor\": \"IOS\",\r\n    \"date_creation\": \"2018-11-18\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/computers/11"
+			},
+			"response": []
+		},
+		{
+			"name": "destroy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|mPFrgQ7xhMvV2MD07g8q3sHFZe22tcOUSqLXfqPEf9551ef8",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/computers/11"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"test@example.com\",\r\n    \"password\": \"password\",\r\n    \"name\": \"Web Application\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/login"
+			},
+			"response": []
+		}
+	]
+}
