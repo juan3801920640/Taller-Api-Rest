@@ -44,7 +44,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"brand\": \"Prueba\",\r\n    \"ram\": 897060027.728,\r\n    \"hard_disk\": 105,\r\n    \"number_cores\": 2,\r\n    \"processor\": \"IOS\",\r\n    \"operative_system\": \"MAC\",\r\n    \"date_creation\": \"2018-11-18\",\r\n    \"graphic_memory?\": 0,\r\n    \"cc_graphic_memory\": 35929.596\r\n}",
+					"raw": "{\r\n    \"brand\": \"Prueba\",\r\n    \"ram\": 897060027.728,\r\n    \"hard_disk\": 105,\r\n    \"number_cores\": 2,\r\n    \"processor\": \"IOS\",\r\n    \"operative_system\": \"MAC\",\r\n    \"date_creation\": \"2018-11-18\",\r\n    \"graphic_memory?\": 0,\r\n    \"cc_graphic_memory\": 35929.596,\r\n    \"categorie_id\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -71,7 +71,7 @@
 						"type": "text"
 					}
 				],
-				"url": "http://127.0.0.1:8000/api/computers/11"
+				"url": "http://127.0.0.1:8000/api/computers/66"
 			},
 			"response": []
 		},
@@ -98,14 +98,14 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"brand\": \"Modificado\",\r\n    \"ram\": 897060027.728,\r\n    \"hard_disk\": 105,\r\n    \"number_cores\": 2,\r\n    \"processor\": \"IOS\",\r\n    \"date_creation\": \"2018-11-18\"\r\n}",
+					"raw": "{\r\n    \"brand\": \"Modificado\",\r\n    \"ram\": 897060027.728,\r\n    \"hard_disk\": 105,\r\n    \"number_cores\": 2,\r\n    \"processor\": \"IOS\",\r\n    \"date_creation\": \"2018-11-18\",\r\n    \"categorie_id\": 1\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "http://127.0.0.1:8000/api/computers/11"
+				"url": "http://127.0.0.1:8000/api/computers/63"
 			},
 			"response": []
 		},
@@ -125,7 +125,135 @@
 						"type": "text"
 					}
 				],
-				"url": "http://127.0.0.1:8000/api/computers/11"
+				"url": "http://127.0.0.1:8000/api/computers/65"
+			},
+			"response": []
+		},
+		{
+			"name": "Index categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|mPFrgQ7xhMvV2MD07g8q3sHFZe22tcOUSqLXfqPEf9551ef8",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "store categories",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|mPFrgQ7xhMvV2MD07g8q3sHFZe22tcOUSqLXfqPEf9551ef8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prueba\",\r\n    \"description\": \"Categoria de prueba\",\r\n    \"priority\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "show categories",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|mPFrgQ7xhMvV2MD07g8q3sHFZe22tcOUSqLXfqPEf9551ef8",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/categories/2"
+			},
+			"response": []
+		},
+		{
+			"name": "update categories",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|mPFrgQ7xhMvV2MD07g8q3sHFZe22tcOUSqLXfqPEf9551ef8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"modificada\",\r\n    \"description\": \"Categoria de prueba\",\r\n    \"priority\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/categories/3"
+			},
+			"response": []
+		},
+		{
+			"name": "destroy Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 1|mPFrgQ7xhMvV2MD07g8q3sHFZe22tcOUSqLXfqPEf9551ef8",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/api/categories/4"
 			},
 			"response": []
 		},
