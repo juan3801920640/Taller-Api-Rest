@@ -25,7 +25,8 @@ class ComputerFactory extends Factory
             'operative_system'=> fake()->randomElement(['Windows', 'Linux', 'MAC']),
             'date_creation' => fake()->date(),
             'graphic_memory?'=> fake()->boolean(),
-            'cc_graphic_memory'=> fake()->randomFloat(3)
+            'cc_graphic_memory'=> fake()->randomFloat(3),
+            'categorie_id' => fake()->randomElement([1, 2])
         ];
     }
 }

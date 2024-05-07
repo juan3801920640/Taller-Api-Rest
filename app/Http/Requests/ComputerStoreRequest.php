@@ -30,7 +30,8 @@ class ComputerStoreRequest extends FormRequest
             'operative_system' => 'nullable|string',
             'date_creation' => 'required|date',
             'graphic_memory?' => 'nullable|boolean',
-            'cc_graphic_memory' => 'nullable'
+            'cc_graphic_memory' => 'nullable',
+            'categorie_id' => 'required|integer'
         ];
     }
 }

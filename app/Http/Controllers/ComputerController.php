@@ -31,7 +31,7 @@ class ComputerController extends Controller
      */
     public function show(Computer $computer)
     {
-        return $computer;
+        return $computer->load('category');
     }
 
     /**

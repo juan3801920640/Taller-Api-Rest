@@ -18,6 +18,11 @@ class Computer extends Model
         'operative_system',
         'date_creation',
         'graphic_memory?',
-        'cc_graphic_memory'
+        'cc_graphic_memory',
+        'categorie_id'
     ];
+
+    public function category(){
+        return $this->belongsTo(Category::class, 'categorie_id', 'id');
+    }
 }
